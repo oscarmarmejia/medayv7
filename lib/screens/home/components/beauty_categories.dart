@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:medayv7/models/Product.dart';
 
 import '../../../constants.dart';
-import '../../details/details_screen.dart';
 import '../../home_screen.dart';
 import '../beauty_screen.dart';
 
 
 
-class Categories extends StatefulWidget {
-  const Categories({Key? key}) : super(key: key);
+class BeautyCategories extends StatefulWidget {
+  const BeautyCategories({Key? key}) : super(key: key);
 
   @override
-  State<Categories> createState() => _CategoriesState();
+  State<BeautyCategories> createState() => _CategoriesState();
 }
 
-class _CategoriesState extends State<Categories> {
+class _CategoriesState extends State<BeautyCategories> {
   List<String> categories = ["Restaurants", "Beauty", "Bars", "Events"];
-  int selectedIndex = 0;
+  int selectedIndex = 1;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -45,10 +43,7 @@ class _CategoriesState extends State<Categories> {
                 builder: (context) => HomeScreen()));
 
           }
-          if(index ==1) {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => BeautyScreen()));
-          }
+
 
         });
 

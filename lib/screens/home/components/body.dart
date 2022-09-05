@@ -15,16 +15,7 @@ class Body extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
-          child: Text(
-            "Welcome to MeDay",
-            style: Theme.of(context)
-                .textTheme
-                .headline5
-           ?.copyWith(fontWeight: FontWeight.bold),
-          ),
-        ),
+  SizedBox(height: 10,),
         Categories(),
         Expanded(
           child: GridView.builder(

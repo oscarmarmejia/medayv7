@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:medayv7/constants.dart';
-import 'package:medayv7/models/Product.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:medayv7/screens/home/components/beauty_body.dart';
 
-import 'home/components/appBar1.dart';
-import 'home/components/body.dart';
+import '../../constants.dart';
 
-class HomeScreen extends StatelessWidget {  @override
-  Widget build(BuildContext context) {
+
+
+class BeautyScreen extends StatelessWidget {  @override
+Widget build(BuildContext context) {
 
   return Scaffold(
     appBar: PreferredSize(
       preferredSize: Size.fromHeight(80.0),
-      child: AppBar(backgroundColor:  Colors.red,
+      child: AppBar(    backgroundColor:  Colors.red,
+
         flexibleSpace: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/images/test2.jpg"), fit: BoxFit.fill
+                image: AssetImage("assets/images/test2.jpg"), fit: BoxFit.fill
               ) ),
         ),
         elevation: 10,
@@ -24,26 +25,20 @@ class HomeScreen extends StatelessWidget {  @override
         leading: IconButton(
           icon: SvgPicture.asset("assets/icons/back.svg"), onPressed: (){},
         ),
-      actions: [
+        actions: <Widget>[
 
-        IconButton(icon: const Icon(Icons.search), onPressed: (){
-          showSearch(context: context, delegate: MySearchDelegate());
-
-
-        })
-      ],
+          IconButton(icon: const Icon(Icons.search), onPressed: (){
+            showSearch(context: context, delegate: MySearchDelegate());
 
 
-
-
-      ),
+          })
+        ],),
     ),
-    body: Body(),
+    body: BeautyBody(),
     bottomNavigationBar: NavigationBar(
       backgroundColor: lenaColor,
-
       destinations: [
-      NavigationDestination(icon: Icon(Icons.home, color: lenaColor2, ),  label: "Home",),
+      NavigationDestination(icon: Icon(Icons.home, color: lenaColor2,), label: "Home"),
       NavigationDestination(icon: Icon(Icons.favorite, color: lenaColor2,), label: "saved"),
       NavigationDestination(icon: Icon(Icons.search, color: lenaColor2,), label: "search"),
       NavigationDestination(icon: Icon(Icons.more_horiz, color: lenaColor2,), label: "more"),
@@ -54,7 +49,7 @@ class HomeScreen extends StatelessWidget {  @override
 
   );
 
-  }
+}
 
 
 }

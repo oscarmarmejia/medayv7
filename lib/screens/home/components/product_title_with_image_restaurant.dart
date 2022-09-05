@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:medayv7/models/RestaurantProduct.dart';
 
 import '../../../constants.dart';
-import '../../../models/Product.dart';
 
 
-
-
-class ProductTitleWithImage extends StatelessWidget {
-  const ProductTitleWithImage({
+class ProductTitleWithImageRestaurant extends StatelessWidget {
+  const ProductTitleWithImageRestaurant({
     Key? key,
     required this.product,
   }) : super(key: key);
 
-  final Product product;
-
+  final RestaurantProduct product;
   @override
   Widget build(BuildContext context) {
     return Padding(
